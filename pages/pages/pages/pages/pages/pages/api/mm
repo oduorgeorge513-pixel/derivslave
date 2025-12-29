@@ -1,0 +1,31 @@
+export default function Pay() {
+  const unlock = () => {
+    localStorage.setItem("paid", "true");
+    alert("Payment confirmed (demo)");
+    window.location.href = "/dashboard";
+  };
+
+  return (
+    <div style={{ padding: 40 }}>
+      <h1>Unlock DerivSlave</h1>
+      <h2>$200 USD</h2>
+
+      <a
+        href="https://buy.stripe.com/YOUR_REAL_LINK"
+        target="_blank"
+      >
+        Pay with Card
+      </a>
+
+      <br /><br />
+
+      <button onClick={unlock}>
+        I Have Paid
+      </button>
+
+      <p>
+        Or WhatsApp: <a href="https://wa.me/254718122277">0718122277</a>
+      </p>
+    </div>
+  );
+}
