@@ -1,0 +1,8 @@
+export default function handler(req, res) {
+  res.status(200).json({
+    market: "Volatility 75",
+    bias: "Bullish",
+    digitFlow: "Even digits dominant",
+    confidence: "78%"
+  });
+}
