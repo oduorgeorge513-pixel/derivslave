@@ -1,0 +1,28 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+
+export default function Dashboard() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const auth = localStorage.getItem("auth");
+    const paid = localStorage.getItem("paid");
+
+    if (!auth) router.push("/login");
+    if (!paid) router.push("/pay");
+  }, []);
+
+  return (
+    <div style={{ padding: 40 }}>
+      <h1>DerivSlave Dashboard</h1>
+      <p>Status: Paid & Logged In</p>
+
+      <ul>
+        <li>📊 Volatility Index Analysis</li>
+        <li>🔢 Digits Flow Tool</li>
+        <li>📈 Trend Direction</li>
+        <li>🔔 Signal Alerts</li>
+      </ul>
+    </div>
+  );
+}
