@@ -1,0 +1,12 @@
+export default function Home() {
+  return (
+    <div style={{ padding: 40 }}>
+      <h1>DerivSlave Analysis Tool</h1>
+      <p>Advanced Deriv market & digits flow analysis</p>
+      <h2>Price: $200 USD</h2>
+
+      <a href="/login">Login</a> |{" "}
+      <a href="https://wa.me/254718122277">Buy via WhatsApp</a>
+    </div>
+  );
+}
